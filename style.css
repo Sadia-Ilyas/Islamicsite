@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === GENERAL RESET === */
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ========== UPPER NAV ========== */
+.uppernav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+  z-index: 10;
+}
+
+.uppernav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  margin-top: 30px;
+  gap: 20px;
+  list-style: none;
+}
+
+.uppernav ul li a {
+  text-decoration: none;
+  color: #CF9B33;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ========== LOWER NAV ========== */
+.lowernav {
+  position: absolute; /* stacked on top */
+  top: 20px; /* adjust based on uppernav height */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.lowernav img {
+  width: 180px;
+  margin-left:80px;
+  
+}
+.lowernav ul {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  gap: 20px;
+  list-style: none;
+}
+
+.lowernav ul li a {
+  text-decoration: none;
+  color: #CF9B33;
+  font-weight: bold;
+}
+hr {
+  width: 100%;
+  position: absolute;
+  top: 155px;
+  z-index: 9;
+  height: 1px;
+  background-color: #CF9B33;
+  border: none;
+}
+
+/* ========== COVER SECTION ========== */
+.cover-section {
+  height: 100vh;
+  background: url("./imgs/photo-1642655078189-72fe1f2d4c91.avif") center
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #CF9B33;
+  position: relative;
+}
+
+.cover-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #e9d4a9;
+  z-index: 1;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 2;
+}
+
+.cover-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.cover-content p {
+  font-size: 20px;
+  font-style: italic;
+}
